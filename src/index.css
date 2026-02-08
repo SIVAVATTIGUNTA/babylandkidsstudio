@@ -1,0 +1,218 @@
+:root {
+  /* Logo-Inspired Palette */
+  --bright-yellow: #FFCE1B;
+  /* Logo Text Yellow */
+  --bright-orange: #FF6B2B;
+  /* Logo Orange/Tangerine */
+  --bright-green: #4CAF50;
+  /* Kid's Green Shirt/Hat */
+  --bright-blue: #00B3FF;
+  /* Kid's Blue Pants */
+  --bright-red: #FF3FA4;
+  /* Kid's Red Shirt */
+
+  /* Dark Accents from Logo */
+  --logo-dark: #1A1A1A;
+  /* Logo Background Black */
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-light: #7A7A7A;
+
+  /* Backgrounds & Tints */
+  --bg-cream: #FFFEF2;
+  /* Warm Cream Background */
+  --white: #FFFFFF;
+  --light-yellow: #FFF9E0;
+  --light-orange: #FFF0E6;
+  --light-green: #E8F5E9;
+
+  /* Gradents */
+  --gradient-logo: linear-gradient(135deg, #FFCE1B, #FF6B2B);
+  --gradient-fun: linear-gradient(135deg, #FFCE1B, #4CAF50, #00B3FF);
+
+  /* Radius & Shadows */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.15);
+
+  /* Fonts */
+  --font-nunito: 'Nunito', sans-serif;
+  --font-quicksand: 'Quicksand', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-quicksand);
+  color: var(--text-primary);
+  background: var(--bg-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-nunito);
+  font-weight: 800;
+  color: var(--logo-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.section-padding {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-label {
+  display: inline-block;
+  background: var(--light-yellow);
+  color: var(--bright-orange);
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  border: 2px dashed var(--bright-yellow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.section-description {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-family: var(--font-nunito);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  gap: 10px;
+  font-size: 1.05rem;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.btn-primary {
+  background: var(--gradient-logo);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 43, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 43, 0.5);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--bright-blue);
+  border: 3px solid var(--bright-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--bright-blue);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 179, 255, 0.3);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}

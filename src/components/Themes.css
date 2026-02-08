@@ -1,0 +1,123 @@
+.themes-section {
+    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--light-yellow) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.themes-section::before {
+    content: '🌈';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 3.5rem;
+    animation: float-magical 10s infinite;
+    opacity: 0.5;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.theme-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid transparent;
+}
+
+.theme-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--bright-yellow);
+}
+
+.theme-image-placeholder {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-card-icon-wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: var(--shadow-sm);
+}
+
+.theme-content {
+    padding: 2.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.theme-title {
+    font-size: 1.6rem;
+    color: var(--logo-dark);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-family: var(--font-nunito);
+}
+
+.theme-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    font-weight: 600;
+}
+
+.theme-btn {
+    font-weight: 800;
+    text-decoration: none;
+    font-family: var(--font-nunito);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    background: var(--bg-cream);
+    margin-top: auto;
+}
+
+.theme-btn:hover {
+    background: var(--logo-dark);
+    color: var(--white) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+    .themes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-image-placeholder {
+        height: 200px;
+    }
+
+    .theme-content {
+        padding: 2rem;
+    }
+}

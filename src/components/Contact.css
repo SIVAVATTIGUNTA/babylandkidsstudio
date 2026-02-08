@@ -1,0 +1,157 @@
+.contact-section {
+    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--light-yellow) 100%);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-form-wrapper {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--light-yellow);
+}
+
+.form-title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--logo-dark);
+    font-weight: 800;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--logo-dark);
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--light-yellow);
+    border-radius: var(--radius-md);
+    font-family: var(--font-quicksand);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--bg-cream);
+    font-weight: 600;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: var(--white);
+    border-color: var(--bright-orange);
+    box-shadow: 0 0 0 4px rgba(255, 107, 43, 0.1);
+    outline: none;
+}
+
+/* Info Column */
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border-left: 8px solid var(--bright-yellow);
+}
+
+.info-card h3 {
+    font-weight: 800;
+    color: var(--logo-dark);
+    margin-bottom: 20px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.info-list .icon {
+    color: var(--bright-orange);
+    flex-shrink: 0;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #25D366;
+    color: white;
+    padding: 16px;
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    background-color: #1ebc57;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 350px;
+    background: var(--logo-dark);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.map-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    font-weight: 700;
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: 2rem;
+    }
+}

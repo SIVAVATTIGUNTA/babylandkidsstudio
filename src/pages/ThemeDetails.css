@@ -1,0 +1,208 @@
+.theme-header {
+    padding: 200px 0 100px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container-simple {
+    position: relative;
+    z-index: 2;
+}
+
+.back-link {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateX(-5px);
+}
+
+.theme-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    margin-top: 20px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-nunito);
+}
+
+.theme-big-icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    backdrop-filter: blur(8px);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-md);
+}
+
+.lead-text {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-weight: 600;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mb-60 {
+    margin-bottom: 80px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+/* BTS Grid */
+.bts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.bts-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed var(--light-yellow);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.bts-card:hover {
+    transform: scale(1.02);
+}
+
+.bts-placeholder {
+    font-size: 4rem;
+}
+
+.bts-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 252, 0.95);
+    padding: 12px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--bright-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Gallery Grid */
+.theme-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.theme-gallery-item {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    aspect-ratio: 1;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--white);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.theme-gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-lg);
+}
+
+.hover-cam {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 107, 43, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.theme-gallery-item:hover .hover-cam {
+    opacity: 1;
+}
+
+/* CTA Box */
+.cta-box {
+    background: var(--white);
+    border: 10px solid;
+    padding: 60px 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+
+    .bts-grid,
+    .theme-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bts-grid,
+    .theme-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-header {
+        padding: 150px 0 80px;
+    }
+
+    .back-link {
+        top: -40px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .mb-60 {
+        margin-bottom: 40px;
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+        border-width: 6px;
+    }
+}
