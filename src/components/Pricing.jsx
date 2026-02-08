@@ -76,10 +76,21 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                <div className="pricing-notes mt-5 text-center" style={{ color: 'var(--text-secondary)', fontWeight: 600, marginTop: '60px' }}>
-                    <p style={{ marginBottom: '8px' }}>* Raw Data is copied on the day of the shoot itself.</p>
-                    <p style={{ marginBottom: '8px' }}>* Payment Should be Cleared on or Before shoot.</p>
-                    <p>* Costumes to Kids (Under 3 years) and Room complimentary.</p>
+                <div className="pricing-notes-section">
+                    <div className="pricing-notes-list">
+                        <div className="pricing-note-item">
+                            <span className="note-icon">📋</span>
+                            <span className="note-text">Raw Data is copied on the day of the shoot itself.</span>
+                        </div>
+                        <div className="pricing-note-item">
+                            <span className="note-icon">💳</span>
+                            <span className="note-text">Payment Should be Cleared on or Before shoot.</span>
+                        </div>
+                        <div className="pricing-note-item">
+                            <span className="note-icon">🎁</span>
+                            <span className="note-text">Costumes to Kids (Under 3 years) and Room complimentary.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -105,3 +105,41 @@
         font-size: 2rem;
     }
 }
+
+@media (max-width: 576px) {
+
+    /* Hide decorative emoji on mobile */
+    .about-section::before {
+        display: none;
+    }
+
+    .about-content-col .section-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .about-content-col p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat-box {
+        padding: 18px 15px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
