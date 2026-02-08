@@ -242,4 +242,10 @@
     .hero-image-wrapper {
         height: 320px;
     }
+
+    /* Hide decorative elements on mobile to prevent text overlap */
+    .hero-section::before,
+    .hero-section::after {
+        display: none;
+    }
 }
